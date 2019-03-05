@@ -1,4 +1,5 @@
 library(stringr)
+library(ggplot2)
 
 x <- read.table("GenGou.txt",as.is=T,header=F)
 x <- x$V1
@@ -15,4 +16,3 @@ gframe <- data.frame(freq)
 g <- ggplot(gframe,aes(x=cl,y=Freq))
 g <- g+geom_bar(stat="identity")
 print(g)
-

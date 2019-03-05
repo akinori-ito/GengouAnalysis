@@ -11,7 +11,6 @@ for (i in 1:length(x)) {
 }
 freq <- table(cl)
 freq <- sort(freq,decreasing=TRUE)
-gnames <- factor(names(freq),labels=names(freq))
 gframe <- data.frame(freq)
 g <- ggplot(gframe,aes(x=cl,y=Freq))
 g <- g+geom_bar(stat="identity")
